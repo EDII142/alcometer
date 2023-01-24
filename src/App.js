@@ -12,6 +12,7 @@ function App() {
   const [result, setResult] = useState(0);
   const [male, setMale] = useState(0);
   const [female, setFemale] = useState(0);
+  const [gender, setGender] = useState(0);
 
   function calculate(e) {
     e.preventDefault();
@@ -20,14 +21,14 @@ function App() {
     setBurning(weight / 10);
     setGramsLeft(grams - (burning * time));
 
-    if (male = true) {
+    if (gender === "male") {
       setResult(gramsLeft / (weight * 0.7));
-    } else if (female = true) {
+    } else if (gender === "female") {
       setResult(gramsLeft / (weight * 0.6));
     }
 
     if (result < 0) {
-      setResult = 0;
+      result = 0;
     }
   }
 
@@ -72,9 +73,9 @@ function App() {
       </div>
       <div>
         <label>Gender</label>
-        <input type="radio" name="male" value={male} onChange={e => setMale(e.target.value)}></input>
+        <input type="radio" name="gender" value={male} onChange={e => setMale(e.target.value)}></input>
         <label>Male</label>
-        <input type="radio" name="female" value={female} onChange={e => setFemale(e.target.value)}></input>
+        <input type="radio" name="gender" value={female} onChange={e => setFemale(e.target.value)}></input>
         <label>Female</label>
       </div>
       <div>
