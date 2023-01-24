@@ -6,10 +6,24 @@ function App() {
   const [weight, setWeight] = useState(0);
   const [bottles, setBottles] = useState(0);
   const [time, setTime] = useState(0);
-  const [liters, setLiters] = useState(0);
-  const [grams, setGrams] = useState(0);
+  const [litres, setLitres] = useState(0);
+  const [gramsLeft, setGramsLeft] = useState(0);
   const [burning, setBurning] = useState(0);
   const [result, setResult] = useState(0);
+
+  function calculate(e) {
+    e.preventDefault();
+    setLitres(bottles * 0.33);
+    const setGrams = (litres * 8 * 4.5);
+    setBurning(weight / 10);
+    setGramsLeft(setGrams - (burning * time));
+
+    if (gender = male) {
+      setResult(grams / (weight * 0.7));
+    } else {
+      setResult(grams / (weight * 0.6));
+    }
+  }
 
   return (
     <form>
