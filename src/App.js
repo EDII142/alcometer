@@ -86,6 +86,7 @@ function App() {
           <button>Calculate</button>
         </div>
       </form>
+        <label>If you change the amount of bottles click calculate three times, if you change time click calculate twice</label>
     </div>
   );
 }
