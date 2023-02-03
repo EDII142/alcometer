@@ -32,6 +32,7 @@ function App() {
     if (result < 0) {
       setResult(0);
     }
+    return result;
   }
 
   return (
@@ -86,7 +87,7 @@ function App() {
           <button>Calculate</button>
         </div>
       </form>
-        <label>If you change the amount of bottles click calculate three times, if you change time click calculate twice</label>
+        <label>First time calculating click the button three times, if you change the amount of bottles click calculate three times, if you change time click calculate twice</label>
     </div>
   );
 }
